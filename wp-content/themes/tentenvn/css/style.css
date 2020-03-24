@@ -251,19 +251,6 @@ span.woocommerce-Price-amount{
   float:left;
   position: relative;
 }
-.nav_primary .menu>li:nth-child(1)::after{
-  content: "\f0c9" !important;
-  font: normal normal normal 14px/1 FontAwesome !important;
-  position: absolute;
-  left: 9px;
-  color:#fff;
-  top: 50%;
-  font-size: 18px !important;
-  margin: -9px 0px 0px 0px;
-}
-.nav_primary .menu>li:nth-child(1)>a{
-  padding: 15px 35px;
-}
 .nav_primary .menu>li.menu-item-has-children::before{
   content: "\f107" !important;
   font: normal normal normal 14px/1 FontAwesome !important;
@@ -381,8 +368,6 @@ article.post{
 
 .nav_primary ul li a:hover{
   color: #fff;
-  background: rgba(255, 255, 255, 0.3);
-  /* border-radius: 20px; */
 }
 #content{
   clear: both;
