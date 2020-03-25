@@ -37,7 +37,6 @@
 
 	<header class="header">
 		<div class="top_header">
-	
 			<span class="icon_mobile_click"><i class="fa fa-bars" aria-hidden="true"></i></span>
 			<div class="container">
 				<div class="logo_site">
@@ -49,7 +48,7 @@
 						<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
 					<?php } ?>
 				</div>
-					<nav class="nav nav_primary">
+				<nav class="nav nav_primary">
 					<?php 
 					$args = array('theme_location' => 'primary');
 					?>
@@ -58,18 +57,68 @@
 
 			</div>
 		</div>
-			<?php if(!is_home() && is_front_page()){ ?>
+		<?php if(!is_home() && is_front_page()){ ?>
 			<div class="tg_banner">
 				<?php echo do_shortcode('[smartslider3 slider=2]'); ?>
 			</div>
-		    <?php }else{?>
-		    <div class="tg_banner banner_fpage">
-		    	<div class="container">
-		    		<img src="<?php echo BASE_URL; ?>/images/img_banner_frontpage.jpg">
-		    	</div>
+		<?php }else{?>
+			<div class="tg_banner banner_fpage">
+				<div class="container">
+					<img src="<?php echo BASE_URL; ?>/images/img_banner_frontpage.jpg">
+				</div>
 			</div>
-		    <?php } ?>
-		</header>
+		<?php } ?>
+		<div class="our_list_contact">
+			<div class="container">
+				<ul class="row">
+					<li class="col-sm-3">
+						<div class="tg_skype">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/sk.png"></a>
+						</div>
+						<div class="tg_zalo">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/zalo.png"></a>
+						</div>
+						<div class="tg_phone">
+							<p>MS.MAI : <a href="tel:0909784800">0909784800</a></p>
+						</div>
+					</li>
+						<li class="col-sm-3">
+						<div class="tg_skype">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/sk.png"></a>
+						</div>
+						<div class="tg_zalo">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/zalo.png"></a>
+						</div>
+						<div class="tg_phone">
+							<p>MS.XUYẾN : <a href="tel:0909784800">0906828896</a></p>
+						</div>
+					</li>
+						<li class="col-sm-3">
+						<div class="tg_skype">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/sk.png"></a>
+						</div>
+						<div class="tg_zalo">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/zalo.png"></a>
+						</div>
+						<div class="tg_phone">
+							<p>MR.TUẤN : <a href="tel:0909784800">0918771713</a></p>
+						</div>
+					</li>
+						<li class="col-sm-3">
+						<div class="tg_skype">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/sk.png"></a>
+						</div>
+						<div class="tg_zalo">
+							<a href="#"><img src="<?php echo BASE_URL; ?>/images/zalo.png"></a>
+						</div>
+						<div class="tg_phone">
+							<p>MR.QUỐC : <a href="tel:0909784800">0913158185</a></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
 
 
 

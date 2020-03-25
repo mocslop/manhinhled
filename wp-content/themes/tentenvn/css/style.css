@@ -246,6 +246,7 @@ span.woocommerce-Price-amount{
 .nav_primary ul li {
   float:left;
   position: relative;
+  margin: 0px 7px 0px;
 }
 .nav_primary .menu>li.menu-item-has-children::before{
   content: "\f107" !important;
@@ -261,12 +262,12 @@ span.woocommerce-Price-amount{
   display: inline-block;
   padding: 10px;
   color: #fff;
-  font-weight: 400;
   transition: all 0.3s;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   line-height: 22px;
- font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 .nav_primary .menu>li:nth-child(1) i.fa{
   font-size: 20px;
@@ -2752,6 +2753,62 @@ a.added_to_cart{
 
 
 /* css rau*/
+#list_post_gthome .aio_catlist{
+  position: relative;
+}
+#list_post_gthome .textwidget p{
+  margin:0px;
+}
+#list_post_gthome .aio_catlist  li .aio_title_post{
+  position: absolute;
+  bottom:0px;
+  width: 100%;
+  margin: 0px;
+}
+#list_post_gthome .aio_catlist  li .aio_title_post a{
+  display: block;
+  text-align: center;
+  padding:10px;
+  background: rgba(0,0,0,0.4);
+  color:#fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+#list_post_gthome  h3.widget-title{
+  display: none;
+}
+#list_post_gthome>.panel-layout>.panel-grid>.panel-grid-cell{
+  width: 33.33333%;
+  padding: 0px;
+}
+#list_post_gthome>.panel-layout>.panel-grid>.panel-grid-cell>.so-panel{
+  margin:0px 0px 2px 0px !important;
+}
+.our_list_contact{
+    background: #ECECEC;
+    border-top: 5px solid #2563B3;
+    padding: 15px 0px;
+}
+.our_list_contact ul li .tg_skype{
+  float:left;
+}
+.our_list_contact ul li .tg_zalo{
+  float:left;
+  margin: 0px 12px;
+}
+.our_list_contact ul li .tg_phone{
+   margin: 4px 0px 0px 0px;
+}
+.our_list_contact ul li .tg_phone p{
+  margin:0px;
+}
+.our_list_contact ul li .tg_phone p {
+  color: #225ca7;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
 .copyright{
   background: #002048;
   padding: 15px 0px;
