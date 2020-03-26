@@ -1,9 +1,10 @@
 <?php
 define("BASE_URL", get_template_directory_uri());
-include get_template_directory().'/includes/admin/function-admin.php';
+//include get_template_directory().'/includes/admin/function-admin.php';
 include get_template_directory().'/includes/admin/custom-post-type.php';
 include get_template_directory().'/includes/admin/aio-list-categories/aio-list-category.php';
 include get_template_directory().'/includes/frontend/woocommerce/woocommerce.php';
+include get_template_directory().'/includes/frontend/woocommerce/featured-product.php';
 include get_template_directory().'/includes/frontend/woocommerce/archive.php';
 include get_template_directory().'/includes/frontend/woocommerce/add_meta_box.php';
 include get_template_directory().'/includes/frontend/woocommerce/single-product.php';

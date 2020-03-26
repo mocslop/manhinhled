@@ -54,17 +54,17 @@ jQuery(document).ready(function(){
 					]
 				});
 		// STICKY NAVBAR
-		var sticky = document.querySelector('.sticky');
+		// var sticky = document.querySelector('.sticky');
 
-		if (sticky.style.position !== 'sticky') {
-			var stickyTop = sticky.offsetTop;
+		// if (sticky.style.position !== 'sticky') {
+		// 	var stickyTop = sticky.offsetTop;
 
-			document.addEventListener('scroll', function () {
-				window.scrollY >= stickyTop ?
-				sticky.classList.add('fixed_menu') :
-				sticky.classList.remove('fixed_menu');
-			});
-		}
+		// 	document.addEventListener('scroll', function () {
+		// 		window.scrollY >= stickyTop ?
+		// 		sticky.classList.add('fixed_menu') :
+		// 		sticky.classList.remove('fixed_menu');
+		// 	});
+		// }
 
 		// MENU MOBILE
 		jQuery(".icon_mobile_click").click(function(){

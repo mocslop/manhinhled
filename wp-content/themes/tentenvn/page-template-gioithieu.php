@@ -16,14 +16,15 @@ get_header();
 			<div class="row">
 				<div class="col-sm-9">
 					<div class="g_content_left">
-						<?php 
-		$my_postid = 540;//This is page id or post id
-		$content_post = get_post($my_postid);
-		$content = $content_post->post_content;
-		$content = apply_filters('the_content', $content);
-		$content = str_replace(']]>', ']]&gt;', $content);
-		echo $content;
-		?>
+		<?php
+		while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
+		<div class="entry-content-page">
+			<?php the_content(); ?> 
+		</div>
+		<?php
+	endwhile; 
+    wp_reset_query(); //resetting the page query
+    ?>
 	</div>
 	
 </div>
