@@ -180,9 +180,7 @@ class CatListDisplayer {
     }
     $lcp_display_output = '<'. $tag . ' ' . $tag_css . '>';
 
-    if ( empty($this->params['no_post_titles']) || !empty($this->params['no_post_titles']) && $this->params['no_post_titles'] !== 'yes' ) {
-      $lcp_display_output .= $this->get_post_title($single);
-    }
+   
 
     // Comments count
     $lcp_display_output .= $this->get_stuff_with_tags_and_classes('comments', $single);
@@ -190,20 +188,25 @@ class CatListDisplayer {
     // Thumbnail image
     $lcp_display_output .= $this->get_thumbnail($single);
 
-    // Excerpt
-    $lcp_display_output .= $this->get_stuff_with_tags_and_classes('excerpt', $single);
-
-   // Author
-    $lcp_display_output .= $this->get_stuff_with_tags_and_classes('author', $single);
-
-    // Date
-    if (!empty($this->params['date_tag']) || !empty($this->params['date_class'])):
+      if (!empty($this->params['date_tag']) || !empty($this->params['date_class'])):
       $lcp_display_output .= $this->get_date($single,
                                              $this->params['date_tag'],
                                              $this->params['date_class']);
     else:
       $lcp_display_output .= $this->get_date($single);
     endif;
+    if ( empty($this->params['no_post_titles']) || !empty($this->params['no_post_titles']) && $this->params['no_post_titles'] !== 'yes' ) {
+      $lcp_display_output .= $this->get_post_title($single);
+    }
+    // Date
+  
+    // Excerpt
+    $lcp_display_output .= $this->get_stuff_with_tags_and_classes('excerpt', $single);
+
+   // Author
+    $lcp_display_output .= $this->get_stuff_with_tags_and_classes('author', $single);
+
+
 
     // Date Modified
     if (!empty($this->params['date_modified_tag']) || !empty($this->params['date_modified_class'])):

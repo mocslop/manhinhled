@@ -93,10 +93,70 @@ get_header( 'shop' );
 						  </ul>
 						</div>
 						<div class="col-sm-9">
-							
-						</div>
-					</div>
-				</div> <!-- container -->
-			</div>
-			<?php
-			get_footer( 'shop' );
+							<?php woocommerce_breadcrumb(); ?>
+
+							<?php
+                    // Only run on shop archive pages, not single products or other pages
+							if ( is_shop() || is_product_category() || is_product_tag() ) {
+                        // Products per page
+								$per_page = 24;
+                        if ( get_query_var( 'taxonomy' ) ) { // If on a product taxonomy archive (category or tag)
+                        	$args = array(
+                        		'post_type' => 'product',
+                        		'posts_per_page' => $per_page,
+                        		'paged' => get_query_var( 'paged' ),
+                        		'tax_query' => array(
+                        			array(
+                        				'taxonomy' => get_query_var( 'taxonomy' ),
+                        				'field'    => 'slug',
+                        				'terms'    => get_query_var( 'term' ),
+                        			),
+                        		),
+                        	);
+                        } else { // On main shop page
+                        	$args = array(
+                        		'post_type' => 'product',
+                        		'orderby' => 'date',
+                        		'order' => 'DESC',
+                        		'posts_per_page' => $per_page,
+                        		'paged' => get_query_var( 'paged' ),
+                        	);
+                        }
+                        // Set the query
+                        $products = new WP_Query( $args );
+                        // Standard loop
+                        ?>
+                        <ul class="row">
+                        <?php 
+                        if ( $products->have_posts() ) :
+                        	while ( $products->have_posts() ) : $products->the_post();
+                        		//var_dump($products);
+                        		?>
+                        		<li class="col-sm-4">
+                        		<div class="tg_product_inner">
+                        			<div class="wrap_figure">
+                        				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $products->post->ID ), 'single-post-thumbnail' );?>
+                        				<figure class="thumbnail" style="background:url(<?php  echo $image[0]; ?>);" class="thumb_product" >
+                        					<a href="<?php the_permalink();?>"></a>
+                        				</figure>
+                        			</div>
+
+                        			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                        			<!-- <a href="<?php bloginfo('url'); ?>?add-to-cart=<?php the_ID(); ?>">Thêm vào giỏ</a> -->
+                        		</div>
+                        		</li>
+                        		<?php
+                        	endwhile;
+                        	wp_reset_postdata();
+                        endif;
+                    } else { // If not on archive page (cart, checkout, etc), do normal operations
+                    	woocommerce_content();
+                    }
+                    ?>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- container -->
+    </div>
+    <?php
+    get_footer( 'shop' );

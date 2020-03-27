@@ -12,7 +12,8 @@ function shortcode_featured_product(){
 		'post_type' => 'product',
 		'posts_per_page' => 10,
 		'ignore_sticky_posts' => 1, 
-		'tax_query' => $tax_query); 
+		'tax_query' => $tax_query
+	); 
 		?>
 		<?php 
 		$getposts = new WP_query( $args);
@@ -99,4 +100,4 @@ function shortcode_featured_product(){
 						  <?php
 						  return ob_get_clean();
 						}
-						add_shortcode('sc_ourproduct','shortcode_our_product');
+add_shortcode('sc_ourproduct','shortcode_our_product');
