@@ -389,14 +389,15 @@ article.post{
   left: initial;
 }
 .scrolltop i.fa{
- width: 30px;
- height: 30px;
+ width: 40px;
+ height: 40px;
  border-radius: 50%;
- background: #002e69;
+ background: none;
  color: #fff;
  text-align: center;
- line-height: 30px;
- font-size: 20px;
+ line-height: 32px;
+ font-size: 31px;
+ border: 2px solid #fff;
 }
 .scrolltop i.fa:hover{
   background: #f0a52b;
@@ -2827,7 +2828,32 @@ a.added_to_cart{
 
 
 /* css rau*/
-
+.list_pd_archive .col-sm-4{
+  margin:0px 0px 30px 0px;
+}
+.list_pd_archive .tg_product_inner h4{
+  margin:10px 0px 0px 0px;
+  text-align: center;
+}
+.list_pd_archive .tg_product_inner h4 a{
+  font-size: 15px;
+  line-height: 21px;
+}
+.page-chinhanh h3.widget-title{
+  font-size: 17px;
+  margin: 0px 0px 10px 0px;
+}
+.page-chinhanh .textwidget p{
+  font-size: 16px;
+  line-height: 27px;
+  margin: 0px;
+}
+.page-chinhanh .container>.panel-layout>.panel-grid>.panel-grid-cell{
+  margin:0px 0px 30px 0px !important;
+}
+.page-template-page-template-chinhanh .footer{
+  margin: 0px 0px 0px 0px;
+}
 .list_post_mhl .aio_catlist li {
   width: 25%;
   float:left;
