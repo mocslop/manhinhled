@@ -35,22 +35,19 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 ) );
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<div class="tg_img_product">
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
-		<img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
-	</div>
-	<div class="woocommerce-product-gallery">
-		<ul>
+	<figure class="woocommerce-product-gallery__wrapper">
 		<?php
-		global $product;
-		$attachment_ids = $product->get_gallery_attachment_ids();
-		foreach( $attachment_ids as $attachment_id ) {
-        //echo $image_link = wp_get_attachment_url( $attachment_id );
-			?>
-			<li><img src="<?php echo wp_get_attachment_url( $attachment_id ); ?>"></li>
-			<?php
+		if ( $product->get_image_id() ) {
+			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
+		} else {
+			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
+			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+			$html .= '</div>';
 		}
+
+		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+
+		do_action( 'woocommerce_product_thumbnails' );
 		?>
-		</ul>
-	</div>
+	</figure>
 </div>

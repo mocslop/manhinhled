@@ -2055,7 +2055,7 @@ p.woocommerce-thankyou-order-received {
   background: #f59200 !important ;
 }
 .woocommerce div.product .product_title{
-  color:#a52626;
+  color: #000;
 }
 .woocommerce-product-details__short-description p{
   font-size: 14px;
@@ -2187,8 +2187,10 @@ p.woocommerce-thankyou-order-received {
   transform: translate(-50%,-50%);
 }
 .single-product .product_title {
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 30px;
+  border-bottom: 1px dashed #000;
+  padding: 0px 0px 5px 0px !important;
 }
 
 .single-product .summary .old-colt .amount{
@@ -2322,12 +2324,10 @@ p.woocommerce-thankyou-order-received {
   -webkit-animation: fadeUptd  0.3s ease-in ;
   -moz-animation: fadeUptd 
 }
-.woocommerce-product-gallery{
-  margin: 35px 0px 0px 0px;
-}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs{
   display: table;
-  margin: 0px auto !important;
+  margin: 0px !important;
   overflow: auto !important;
   padding: 0px !important;
 }
@@ -2345,7 +2345,7 @@ p.woocommerce-thankyou-order-received {
   border-bottom:1px solid #000 !important;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a{
-  color:#ffa521 !important;
+  color: #fff !important;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active{
   border:1px solid #e6e6e6 !important;
@@ -2353,20 +2353,23 @@ p.woocommerce-thankyou-order-received {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a{
-  padding: 12px 30px 10px 30px !important;
+  padding: 7px 20px 7px 20px !important;
   display: block !important;
   text-transform: uppercase;
   font-size: 15px;
   line-height: 23px;
   position: relative;
+  background: #627f9a;
+  color: #fff !important;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs::before , .woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before{
  display: none !important;
 }
 .tg_wrap_tab{
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
   margin: 0px 0px 20px 0px;
+  border-top: 1px solid #ccc;
 }
 .woocommerce div.product .woocommerce-tabs .panel{
   border:none !important;
@@ -2593,6 +2596,7 @@ a.added_to_cart{
 .footer .menu li a {
   color:#fff;
   position: relative;
+  font-size: 14px;
 }
 .footer .menu li{
   margin: 0px 0px 5px 0px;
@@ -2602,7 +2606,7 @@ a.added_to_cart{
   margin: 0px 5px 0px 0px;
 }
 .footer  h3.widget-title{
- font-size: 14px;
+ font-size: 15px;
  text-transform: uppercase;
  font-weight: 700;
  margin: 0px 0px 15px 0px;
@@ -2619,7 +2623,7 @@ a.added_to_cart{
   margin:0px;
 }
 .footer  .textwidget p{
- font-size: 13px;
+ font-size: 14px;
  color: #fff;
  line-height: 23px;
  margin: 0px 0px 5px 0px;
@@ -2823,6 +2827,7 @@ a.added_to_cart{
 
 
 /* css rau*/
+
 .list_post_mhl .aio_catlist li {
   width: 25%;
   float:left;

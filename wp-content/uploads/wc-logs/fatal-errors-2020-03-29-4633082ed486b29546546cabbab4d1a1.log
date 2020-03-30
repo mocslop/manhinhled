@@ -1,0 +1,19 @@
+2020-03-29T08:36:30+00:00 CRITICAL Uncaught Error: Call to a member function get_image_id() on string in C:\xampp\htdocs\manhinhled\wp-content\themes\tentenvn\woocommerce\single-product.php:114
+Stack trace:
+#0 C:\xampp\htdocs\manhinhled\wp-includes\template-loader.php(78): include()
+#1 C:\xampp\htdocs\manhinhled\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\manhinhled\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\manhinhled\wp-content\themes\tentenvn\woocommerce\single-product.php on line 114
+
+2020-03-29T08:41:26+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on string in C:\xampp\htdocs\manhinhled\wp-content\themes\tentenvn\woocommerce\single-product\sale-flash.php:26
+Stack trace:
+#0 C:\xampp\htdocs\manhinhled\wp-content\plugins\woocommerce\includes\wc-core-functions.php(251): include()
+#1 C:\xampp\htdocs\manhinhled\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1565): wc_get_template('single-product/...')
+#2 C:\xampp\htdocs\manhinhled\wp-includes\class-wp-hook.php(286): woocommerce_show_product_sale_flash('')
+#3 C:\xampp\htdocs\manhinhled\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\manhinhled\wp-includes\plugin.php(465): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\manhinhled\wp-content\themes\tentenvn\woocommerce\single-product.php(111): do_action('woocommerce_bef...')
+#6 C:\xampp\htdocs\manhinhled\wp-includes\template-loader.php(78): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\manhinhled\wp-blog-header.php(19): require_once('C:\\xampp\\ in C:\xampp\htdocs\manhinhled\wp-content\themes\tentenvn\woocommerce\single-product\sale-flash.php on line 26
+

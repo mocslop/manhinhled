@@ -87,3 +87,14 @@ function move_single_product_price() {
     add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 29);
 }
 add_action('woocommerce_single_product_summary', 'move_single_product_price', 1);
+
+/**
+ * Rename "home" in breadcrumb
+ */
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text' );
+function wcc_change_breadcrumb_home_text( $defaults ) {
+    // Change the breadcrumb home text from 'Home' to 'Apartment'
+  $defaults['home'] = '&nbsp;';
+  return $defaults;
+}
+

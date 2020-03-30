@@ -130,7 +130,7 @@ function bbloomer_custom_action() {
 
   <?php
 }
-add_action( 'woocommerce_product_thumbnails', 'bbloomer_custom_action', 10 );
+//add_action( 'woocommerce_product_thumbnails', 'bbloomer_custom_action', 10 );
 
 // ADD CHECKBOX HIDE CATEGORY
 function wh_taxonomy_edit_meta_field($term) {
@@ -161,3 +161,4 @@ function wh_save_taxonomy_custom_meta($term_id) {
 
 add_action('edited_product_cat', 'wh_save_taxonomy_custom_meta', 10, 1);
 // END ADD CHECKBOX HIDE CATEGORY
+

@@ -8,7 +8,7 @@ if ( ! function_exists( 'create_custom_meta_box' ) )
   function create_custom_meta_box()
   {
     add_meta_box(
-      'custom_product_meta_box',  __( 'Thông số kỹ thuật', 'cmb' ), 'add_custom_content_meta_box', 'product', 'normal','default'
+      'custom_product_meta_box',  __( 'Chi tiết sản phẩm', 'cmb' ), 'add_custom_content_meta_box', 'product', 'normal','default'
     );
   }
 }
@@ -79,7 +79,7 @@ if ( ! function_exists( 'add_custom_content_meta_box' ) ){
 
       if ( ! empty( $product_tskt ) )
         $tabs['tskt_tab'] = array(
-          'title'    => __( 'Thông số kỹ thuật', 'woocommerce' ),
+          'title'    => __( 'Chi tiết sản phẩm', 'woocommerce' ),
           'priority' => 10,
           'callback' => 'tskt_product_tab_content'
         );
