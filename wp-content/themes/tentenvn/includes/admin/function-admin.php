@@ -8,13 +8,6 @@ function ch_essentials_admin() {
 	register_setting('zang-settings-socials', 'footer_twitter');
 	register_setting('zang-settings-socials', 'footer_ggplus');
 	register_setting('zang-settings-socials', 'footer_insta');
-	// Commit index
-	register_setting('zang-settings-commit', 'idx_commit_title_one');
-	register_setting('zang-settings-commit', 'idx_commit_desc_one');
-	register_setting('zang-settings-commit', 'idx_commit_title_two');
-	register_setting('zang-settings-commit', 'idx_commit_desc_two');
-	register_setting('zang-settings-commit', 'idx_commit_title_three');
-	register_setting('zang-settings-commit', 'idx_commit_desc_three');
 	/* Base Menu */
 	add_menu_page('Theme Option','Tenten Framework','manage_options','template_admin_zang','zang_theme_create_page',get_template_directory_uri() . '/images/tenten.png',110);
 }
@@ -33,14 +26,6 @@ function zang_custom_settings() {
 	add_settings_field('ggplus','Google Plus Link', 'zang_footer_ggplus','zang-settings-socials', 'zang-social-options');
 	add_settings_field('insta','Instagram Link', 'zang_footer_insta','zang-settings-socials', 'zang-social-options');
 
-	/* Commit Options Section */
-	add_settings_section('zang-commit-options','Chỉnh sửa cam kết trang chủ','zang_commit_options_callback','zang-settings-commit');
-	add_settings_field('idx-commit-title-one','Cam kết 1','zang_commit_title_one', 'zang-settings-commit','zang-commit-options');
-	add_settings_field('idx-commit-desc-one','','zang_commit_desc_one', 'zang-settings-commit','zang-commit-options');
-	add_settings_field('idx-commit-title-two','Cam kết 2','zang_commit_title_two', 'zang-settings-commit','zang-commit-options');
-	add_settings_field('idx-commit-desc-two','','zang_commit_desc_two', 'zang-settings-commit','zang-commit-options');
-	add_settings_field('idx-commit-title-three','Cam kết 3','zang_commit_title_three', 'zang-settings-commit','zang-commit-options');
-	add_settings_field('idx-commit-desc-three','','zang_commit_desc_three', 'zang-settings-commit','zang-commit-options');
 }
 
 function zang_header_options_callback(){

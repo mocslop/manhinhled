@@ -38,7 +38,6 @@
 	<header class="header">
 		<div class="top_header">
 			<span class="icon_mobile_click"><i class="fa fa-bars" aria-hidden="true"></i></span>
-			<div class="container">
 				<div class="logo_site">
 					<?php 
 					if(has_custom_logo()){
@@ -54,8 +53,6 @@
 					?>
 					<?php wp_nav_menu($args); ?>
 				</nav>
-
-			</div>
 		</div>
 		<?php if(!is_home() && is_front_page()){ ?>
 			<div class="tg_banner">

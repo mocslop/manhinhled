@@ -53,6 +53,9 @@ jQuery(document).ready(function(){
 					}
 					]
 				});
+		jQuery('.list_btn button').click(function(){
+			jQuery('.list_group .col-sm-6 input , .list_group .col-sm-6 textarea ').val('');
+		});	
 		// STICKY NAVBAR
 		// var sticky = document.querySelector('.sticky');
 
